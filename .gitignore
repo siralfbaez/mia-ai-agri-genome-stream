@@ -1,0 +1,48 @@
+# .gitignore:
+
+# --- Go Binaries & Tooling ---
+bin/
+main
+*.test
+*.out
+vendor/
+go.work
+
+# --- Terraform & Cloud Provider State ---
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+*.tfvars
+*.tfvars.json
+
+# --- GCP Specific Secrets (The "Synapses") ---
+# Never push service account JSON keys
+*-sa-key.json
+gcp-key.json
+adc.json
+.gcp/
+
+# --- Secrets & Environment ---
+.env
+.env.local
+.env.*.local
+.mia-secrets
+.vault-token
+
+# --- IDEs & OS ---
+.vscode/
+.idea/
+.DS_Store
+
+# --- Logs & Telemetry ---
+*.log
+logs/
+.fluentd/
+
+# --- Python / Notebooks ---
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+venv/
+
