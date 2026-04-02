@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package genomics.v1;
+
+option go_package = "github.com/siralfbaez/mia-ai-agri-genome-stream/api/proto";
+
+// The GenomicEvent is the core 'signal' in the nervous system.
+message GenomicEvent {
+    string event_id = 1;
+    string sample_id = 2;          // The specific crop/seed identifier
+    string sequencer_id = 3;       // The machine source (SCADA node)
+    int64 timestamp = 4;           // Nanoseconds since epoch
+    
+    // Variant Data (The scientific payload)
+    string chromosome = 5;         // e.g., "Chr1"
+    int64 position = 6;            // Genomic coordinate
+    string reference_allele = 7;   // Original DNA base
+    string alternate_allele = 8;   // Mutated DNA base
+    
+    // Agentic Metadata (Enriched by AI-Agent later)
+    float quality_score = 9;
+    map<string, string> annotations = 10; 
+}
