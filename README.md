@@ -157,5 +157,5 @@ go run main.go
 
 
 ## 📝 Author
-Alf - AI Solution Architect / Sr. Cloud Engineer
+Alf - AI Solution Architect / Sr. Cloud Solutions Architect and hands on Engineer
 
